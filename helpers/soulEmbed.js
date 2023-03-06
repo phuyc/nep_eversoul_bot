@@ -22,7 +22,7 @@ async function soulEmbed(name) {
     // * Create skills embed
     skillsEmbed = new EmbedBuilder()
         .setTitle(`[${TYPES[json.type] ?? json.type}] [${CLASSES[json.class] ?? json.class}] ${json.name}`)
-        .setDescription(`[Check out our detailed ratings and reviews](https://www.prydwen.gg/artery-gear/characters/${name.trim().replace(/ /g, "-").toLowerCase()})`)
+        .setDescription(`[Check out our detailed ratings and reviews](https://www.prydwen.gg/eversoul/characters/${name.trim().replace(/ /g, "-").toLowerCase()})`)
         .setThumbnail(`https://prydwen.gg${json.smallImage.localFile.childImageSharp.gatsbyImageData.images.fallback.src}`)
         .setColor(randomColor())
         .setTimestamp()
@@ -36,6 +36,7 @@ async function soulEmbed(name) {
 
     if (!skills) {
         skillsEmbed.addFields({ name: 'The skills are not available for this character yet', value: 'We will add them as soon as it is possible!' });
+        return skillsEmbed;
     }
 
     count = 0;
