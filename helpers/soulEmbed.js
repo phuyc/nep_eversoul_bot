@@ -29,10 +29,15 @@ async function soulEmbed(name) {
         .setFooter({ text: 'nepnep#1358', iconURL: 'https://store.playstation.com/store/api/chihiro/00_09_000/container/BE/nl/19/EP0031-CUSA03124_00-AV00000000000037/image?w=320&h=320&bg_color=000000&opacity=100&_version=00_09_000' })
         .addFields(
             // Field 3 (Ratings)               
-            { name: 'RATINGS', value: `**PVE**: ${RATINGS[json.ratings.pve] ?? '?'} **PVP**: ${RATINGS[json.ratings.pvp] ?? '?'}` },
+            { name: 'RATINGS', value: `**PVE (Early/Late)**: ${RATINGS[json.ratings.pve_early] ?? '?'}/${RATINGS[json.ratings.pvp_late] ?? '?'}` },
         );
 
     skills = json.skills;
+
+    if (!skills) {
+        skillsEmbed.addFields({ name: 'The skills are not available for this character yet', value: 'We will add them as soon as it is possible!' });
+    }
+
     count = 0;
     for (skill of skills) {
         descriptions = JSON.parse(skill.description.raw).content[0].content;
