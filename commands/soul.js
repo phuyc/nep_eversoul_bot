@@ -5,7 +5,7 @@ const bestMatch = require('../helpers/bestMatch')
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('soul')
-        .setDescription('Displays the information of a nikke')
+        .setDescription('Displays the information of a soul')
         .addStringOption(option => 
             option.setName('name')
                 .setDescription('name of the character')
