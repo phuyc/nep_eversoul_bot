@@ -6,7 +6,7 @@ const info = new EmbedBuilder()
         .setDescription('[Invite nep to your server](https://discord.com/oauth2/authorize?client_id=1061666940365574144&permissions=277025655808&scope=applications.commands%20bot)')
         .setThumbnail('https://preview.redd.it/kt3311mn5bp01.png?auto=webp&s=e420455ca8880f533a66514151a197f0f89adce6')
         .addFields(
-                { name: 'Bot Info', value: 'A bot to look up various information from the game Counter:Side\n**Creator:** nepnep\n**Data provided by:** [Prydwen](https://prydwen.gg)\n**Inspired by Hifumin Bot**', inline: true},
+                { name: 'Bot Info', value: 'A bot to look up various information from the game Eversoul\n**Creator:** nepnep\n**Data provided by:** [Prydwen](https://prydwen.gg)\n**Inspired by Hifumin Bot**', inline: true},
                 { name: 'Contact Info', value: `**Discord username:**\nnepnep#1358\n**Join our Discord:** [discord.gg/prydwen](https://discord.gg/prydwen) `, inline: true}
             )
         .setTimestamp()
